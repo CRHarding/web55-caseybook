@@ -1,4 +1,5 @@
 import './App.css';
+import React, { useState } from 'react';
 
 const initialUser = {
   gender: "male",
@@ -20,6 +21,7 @@ const initialUser = {
 }
 
 function App() {
+  const [user, setUser] = useState(initialUser);
   return (
     <div className="App">
       <h1>CASEYBOOK (It's like Facebook only made by some guy named Casey)</h1>
