@@ -1,24 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
 
-const initialUser = {
-  gender: "male",
-  name: {
-    first: "Casey",
-    last: "Harding"
-  },
-  location: {
-    state: "NY"
-  },
-  email: "C@C.com",
-  login: {
-    uuid: "blahblahblah",
-    username: "CRHarding"
-  },
-  picture: {
-    large: "https://downloadwallpaper.org/wp-content/uploads/2016/05/thor-wallpaper3.jpg"
-  }
-}
+import initialUser from "./data";
 
 function App() {
   const [user, setUser] = useState(initialUser);
