@@ -25,6 +25,14 @@ function App() {
   return (
     <div className="App">
       <h1>CASEYBOOK (It's like Facebook only made by some guy named Casey)</h1>
+      { user && (
+        <div className="profile-wrapper">
+          <p>{user.gender}</p>
+          <p>Name: {user.name.first} {user.name.last}</p>
+          <p>Location: {user.location.state}</p>
+          <img src={user.picture.large} />
+        </div>
+      )}
     </div>
   );
 }
