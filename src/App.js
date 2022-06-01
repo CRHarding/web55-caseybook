@@ -12,14 +12,17 @@ function App() {
   useEffect(() => {
     axios.get("https://randomuser.me/api/?results=5")
       .then(res => {
-        console.log(res.data.results);
+        setFriends(res.data.results);
       }).catch(err => console.error(err));
   }, [])
   
   return (
     <div className="App flex-column">
       <h1>CASEYBOOK</h1>
-      { user && (
+      {friends.map(friend => {
+        return <Profile key={friend.login.uuid} user={friend} />
+      })}
+      {user && (
         <Profile user={user} />
       )}
     </div>
