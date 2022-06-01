@@ -23,10 +23,10 @@ const initialUser = {
 function App() {
   const [user, setUser] = useState(initialUser);
   return (
-    <div className="App">
-      <h1>CASEYBOOK (It's like Facebook only made by some guy named Casey)</h1>
+    <div className="App flex-column">
+      <h1>CASEYBOOK</h1>
       { user && (
-        <div className="profile-wrapper">
+        <div className="profile-wrapper flex-column">
           <p>{user.gender}</p>
           <p>Name: {user.name.first} {user.name.last}</p>
           <p>Location: {user.location.state}</p>
